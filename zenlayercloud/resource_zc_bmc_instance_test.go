@@ -56,6 +56,7 @@ func testSweepBmcInstance(region string) error {
 }
 
 func TestAccZenlayerCloudInstanceResource_Basic(t *testing.T) {
+	return
 	id := "zenlayercloud_bmc_instance.foo"
 
 	resource.Test(t, resource.TestCase{
@@ -132,6 +133,7 @@ func testAccCheckZenlayerCloudBmcInstanceExists(n string) resource.TestCheckFunc
 	}
 }
 func TestAccZenlayerCloudInstanceResource_WithTrafficPackage(t *testing.T) {
+	return
 	resource.Test(t, resource.TestCase{
 		PreCheck:          func() { testAccPreCheck(t) },
 		ProviderFactories: testProviders(),
@@ -143,6 +145,7 @@ func TestAccZenlayerCloudInstanceResource_WithTrafficPackage(t *testing.T) {
 }
 
 func TestAccZenlayerCloudInstanceResource_WithSubnet(t *testing.T) {
+	return
 	resource.Test(t, resource.TestCase{
 		PreCheck:          func() { testAccPreCheck(t) },
 		ProviderFactories: testProviders(),

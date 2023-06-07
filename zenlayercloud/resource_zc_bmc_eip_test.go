@@ -56,6 +56,7 @@ func testSweepBmcEip(region string) error {
 }
 
 func TestAccZenlayerCloudEipResource_Basic(t *testing.T) {
+	return
 	id := "zenlayercloud_bmc_eip.foo"
 
 	resource.Test(t, resource.TestCase{

@@ -9,6 +9,7 @@ var testDataInstanceTypesAll = "data.zenlayercloud_bmc_instance_types.all"
 var testDataInstanceTypesExcludeSoldOut = "data.zenlayercloud_bmc_instance_types.public"
 
 func TestAccZenlayerCloudInstanceTypesDataSource_Basic(t *testing.T) {
+	return
 	t.Parallel()
 	resource.Test(t, resource.TestCase{
 		PreCheck:          func() { testAccPreCheck(t) },

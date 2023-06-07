@@ -11,6 +11,16 @@ import (
 
 var testAccProvider = Provider()
 
+func TestProvider(t *testing.T) {
+	if err := Provider().InternalValidate(); err != nil {
+		t.Fatalf("err: %s", err)
+	}
+}
+
+func TestProviderImpl(t *testing.T) {
+	var _ = Provider()
+}
+
 func testProviders() map[string]func() (*schema.Provider, error) {
 	return map[string]func() (*schema.Provider, error){
 		"zenlayercloud": func() (*schema.Provider, error) { return testAccProvider, nil },
@@ -37,11 +47,5 @@ func testAccCheckZenlayerCloudDataResourceID(n string) resource.TestCheckFunc {
 			return fmt.Errorf("data source ID not set")
 		}
 		return nil
-	}
-}
-
-func TestProvider(t *testing.T) {
-	if err := Provider().(*schema.Provider).InternalValidate(); err != nil {
-		t.Fatalf("err: %s", err)
 	}
 }

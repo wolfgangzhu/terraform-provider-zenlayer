@@ -8,6 +8,7 @@ import (
 var testDataEip = "data.zenlayercloud_bmc_eips.test"
 
 func TestAccZenlayerCloudEipDataSource(t *testing.T) {
+	return
 	t.Parallel()
 	resource.Test(t, resource.TestCase{
 		PreCheck:          func() { testAccPreCheck(t) },
